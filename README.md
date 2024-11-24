@@ -1,14 +1,45 @@
-# ProjectArbeit_TRFC_Estimation
-Estimation of the Tire Road Friction Coefficient during stationary and slow moving positions
+# ProjrctArbeit_TRFC_Estimation
 
 The friction coefficient between a vehicle's tires and the road surface is a crucial parameter influencing vehicle dynamics. Here, I discuss some of findings.
 
-# Tire Contact Patch Normal Force Distribution
+## Tire Contact Patch Normal Force Distribution
 
-The distribution of normal force within the tire's contact patch, \( q_z(x, y) \), is a critical factor in tire modeling. Various pressure distribution models have been proposed to approximate real tire behavior.
+The distribution of normal force within the tire's contact patch, $$  q_z(x, y)  $$, is a critical factor in tire modeling. Various pressure distribution models have been proposed to approximate real tire behavior.
 
-In this work, the normal load distribution is derived by specifying individual distributions in the longitudinal (\( q_{zx}(x) \)) and lateral (\( q_{zy}(y) \)) directions, which are then multiplied together:
+In this work, the normal load distribution is derived by specifying individual distributions in the longitudinal $$ q_zx(x) $$ and lateral $$  q_zy(y) $$ directions, which are then multiplied together:
+
 $$
 q_z(x, y) = q_{zx}(x) \cdot q_{zy}(y)
 $$
 
+### 1. Quartic load Distribution in Longitudinal and Tapered-off Distrivution in the lateral direction
+
+The longitudinal distribution \( q_{zx}(x) \) is given by:
+
+$$
+q_{zx}(x) = c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0
+$$
+
+The value of the constant can be obtain by applying following constraints.
+  1. Two Boundary value constraints
+  2. Total load
+  3. Slope of the normal force
+  4. Central load constraint
+
+The Tapered-off distribution \( q_{zy}(y) \) is given by:
+
+$$
+q_z(x,y) = \frac{3F_z}{4a} \left(1 - \left(\frac{x}{a}\right)^2 \right)
+$$
+
+Where,
+
+  Fz = Total vehicle load
+  
+  a = Half-length of the contact patch
+
+  x = Total length of the conatct patch
+
+  ![x_quartic_y_trapezoidal](https://github.com/user-attachments/assets/2d71f62e-70cc-4cb8-a2e8-335972c58ae4)
+
+ 
