@@ -2,6 +2,12 @@
 
 The friction coefficient between a vehicle's tires and the road surface is a crucial parameter influencing vehicle dynamics. Here, I discuss some of findings.
 
+# Motivation
+
+Have you ever wondered what happens to the tire contact patch when you rotate the steering wheel left and right while the vehicle remains stationary? 
+How does this motion influence the shear stress distribution in the contact area? 
+And how can this phenomenon be used to estimate the friction coefficient?
+
 ## Tire Contact Patch Normal Force Distribution
 
 The distribution of normal force within the tire's contact patch, q_z(x, y) is a critical factor in tire modeling. Various pressure distribution models have been proposed to approximate real tire behavior.
